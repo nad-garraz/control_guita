@@ -3,7 +3,9 @@ import funciones as gf
 import prompts as gp
 
 
+# Archivo con la información
 archivo_de_datos = "/home/test/programitas/python_projects/guita/datos.csv"
+# Archivo copiado bkp antes de editar nada
 archivo_de_datos_bkp = "/home/test/programitas/python_projects/guita/datos.tar.bzip2"
 
 
