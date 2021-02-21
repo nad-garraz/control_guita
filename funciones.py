@@ -45,7 +45,6 @@ def agregar_dato_a_archivo(fecha, monto, categoria, archivo):
     """writes a line of formated and coma separated values to file"""
     with open(archivo, mode="a+") as datos_file:
         datos_file.write(f"{fecha},{monto},{categoria}\n")
-    order_first_column_by_dates(archivo)
 
 def mostrar_lista_de_entradas(lista):
     fecha_actual = lista[0][0][6]

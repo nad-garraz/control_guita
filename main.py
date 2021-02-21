@@ -20,10 +20,8 @@ def main():
         # Choice
         eleccion = gf.eleccion_usuario()
         if eleccion == "1":
-            # Enter movement
-            fecha, monto, categoria = gim.recibir_movimiento()
-            # Agrego el dato al archivo
-            gf.agregar_dato_a_archivo(fecha, monto, categoria.upper(), archivo_de_datos)
+            # Enter move
+            gim.recibir_movimiento(archivo_de_datos)
             # Ordeno el archivo
             gf.order_first_column_by_dates(archivo_de_datos)
         elif eleccion == "2":
@@ -32,6 +30,8 @@ def main():
             gp.prompt_data(eleccion, lista_de_datos)
         elif eleccion == "3":
             gf.editar_manual(archivo_de_datos)
+            # Ordeno el archivo
+            gf.order_first_column_by_dates(archivo_de_datos)
         # Quit loop
         elif eleccion in gf.exit:
             break
