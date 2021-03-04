@@ -1,17 +1,15 @@
 import input_manipulation as gim
 import funciones as gf
 import prompts as gp
-
+import user_data as gud
 
 # Archivo con la información
-archivo_de_datos = "/home/test/programitas/python_projects/guita/datos.csv"
-# Archivo copiado bkp antes de editar nada
-archivo_de_datos_bkp = "/home/test/programitas/python_projects/guita/datos.tar.bzip2"
+archivo_de_datos = gud.get_archivo_datos()
 
 
 def main():
     # Hago un bkp antes de modificar nada
-    gf.do_backup(archivo_de_datos, archivo_de_datos_bkp)
+    gud.backup_datos(archivo_de_datos)
     while True:
         # Make the list of data that its easier to work with
         lista_de_datos = gf.archivo_a_lista(archivo_de_datos)

@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt
 import funciones as gf
 import prompts as gp
+import os
+import user_data as gud
 import subprocess
 import socket
 import numpy as np
 import datetime as date
-import pandas as pd
 
-dolar_subprocess = "/home/test/programitas/python_projects/guita/dolar_hoy"
+dolar_subprocess = os.path.join(gud.get_directorio_datos(), "dolar_hoy") # Crea archivo con info del dolar
 REMOTE_SERVER = "one.one.one.one"
 hoy = date.date.today()
 
@@ -85,7 +86,7 @@ def pie_gastos(dicc, lista):
     plt.pie(totales_cat, labels=cat,
             autopct='%1.1f%%', wedgeprops={'edgecolor': 'black'})
     plt.title('Our expenses')
-    plt.show()
+    plt.show(block = False)
 
 
 def ahorro_vs_tiempo(lista):

@@ -99,10 +99,6 @@ def selector_de_periodo(lista):
     delta_days = str(hasta_fecha - desde_fecha).split(" ")[0]
     return nueva_lista, float(delta_days)
 
-
-def do_backup(archivo, bkp):
-    os.system(f'tar -cjP {archivo} -f {bkp}')
-
 def editar_manual(archivo):
     os.system(f'$EDITOR {archivo}')
 
