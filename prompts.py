@@ -21,7 +21,7 @@ def principal_menu():
     separador(2)
     menu_dict = {"1": "Ingresar movimiento",
                  "2": "Info monetaria",
-                 "3": "Corregir manualmente",
+                 "3": "Corregir datos manualmente",
                  "4": "Salir"}
     for key, value in menu_dict.items():
         print(f"{key} - {value}")

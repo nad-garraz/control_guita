@@ -1,6 +1,8 @@
 import os
 
 
+# Estaría bueno parsear esto desde una config file en vez de que esté
+# hardcodeado así.
 directorio_local = ".local/guitarra"
 nombre_archivo = "datos.csv"
 
