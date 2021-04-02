@@ -115,7 +115,8 @@ def ahorro_vs_tiempo(lista):
     ahorro_col = np.array([ item[1] for item in ahorro_parcial ])
     maximo = np.amax(ahorro_col) # Busco máximo para normalizar
     maximo_abs = np.where(ahorro_col == maximo) # Indice de máximo
-    ahorro_col = ahorro_col / maximo * 100 # Normalizo
+    # ahorro_col = ahorro_col / maximo # Normalizo
+    ahorro_col = ahorro_col # Ahorro total
 
     # Tuneo los ticks
     ax = plt.axes()
@@ -127,6 +128,6 @@ def ahorro_vs_tiempo(lista):
     plt.fill_between(dates_col, ahorro_col, where = (ahorro_col < 0), alpha = 0.3, interpolate = True) # Para la condición era necesario el array del numpy
     # plt.text(dates_col[-1],ahorro_col[-1], f'({dates_col[-1]},{ahorro_col[-1]})')
     plt.grid()
-    plt.ylabel('Ahorro %')
+    plt.ylabel('Ahorro')
     plt.tight_layout()
     plt.show(block = False) # El False lo pongo para que cuando aparezca el gráfico pueda seguir usando el programa sin necesidad de cerrar el gráfico.
